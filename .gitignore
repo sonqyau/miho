@@ -1,0 +1,42 @@
+# macOS
+
+.DS_Store
+
+# Xcode
+
+## User settings
+xcuserdata/
+
+## Obj-C/Swift specific
+*.hmap
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+
+Packages/
+Package.pins
+Package.resolved
+*.xcodeproj
+
+.swiftpm
+
+.build/
+
+# Others
+
+miho/Resources/config.yaml
+miho/Resources/Country.mmdb
+miho/Resources/Country.mmdb.lzfse
+miho/Resources/geosite.dat
+miho/Resources/geosite.dat.lzfse
+miho/Resources/Kernel/*
+!miho/Resources/Kernel/toolchain/
+!miho/Resources/Kernel/toolchain/**
+miho/Resources/Kernel/toolchain/build/
+miho/Resources/Kernel/toolchain/build/**
+miho/Resources/Kernel/toolchain/source/
+miho/Resources/Kernel/toolchain/source/**

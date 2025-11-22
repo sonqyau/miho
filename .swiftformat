@@ -1,0 +1,166 @@
+# Google Swift Style Guide: https://google.github.io/swift/
+# SwiftFormat Documentation: https://raw.githubusercontent.com/nicklockwood/SwiftFormat/refs/heads/main/Rules.md
+
+--exclude .build,.swiftpm,miho.xcodeproj,miho/Resources,miho/Sources/Daemons
+
+--indent 2
+--tabwidth 2
+--smarttabs enabled
+--xcodeindentation enabled
+--indentcase false
+--indentstrings false
+
+--maxwidth 100
+
+--wraparguments before-first
+--wrapparameters before-first
+--wrapcollections before-first
+--closingparen balanced
+
+--allman false
+--elseposition same-line
+--guardelse auto
+
+--trimwhitespace always
+
+--semicolons never
+
+--commas always
+
+--voidtype void
+
+--emptybraces spaced
+
+--linebreaks lf
+
+--self remove
+--selfrequired []
+
+--importgrouping testable-bottom
+
+--header preserve
+
+--ranges nospace
+
+--decimalgrouping 3,6
+--binarygrouping 4,8
+--octalgrouping 4,8
+--hexgrouping 4,8
+--fractiongrouping disabled
+--exponentgrouping disabled
+--hexliteralcase uppercase
+--exponentcase lowercase
+
+--operatorfunc spaced
+
+--stripunusedargs closure-only
+
+--modifierorder override,private,fileprivate,internal,package,public,open,private(set),fileprivate(set),internal(set),package(set),public(set),open(set),final,dynamic,optional,required,convenience,indirect,isolated,nonisolated,nonisolated(unsafe),lazy,weak,unowned,unowned(safe),unowned(unsafe),static,class,borrowing,consuming,mutating,nonmutating,prefix,infix,postfix,async
+
+--wrapternary before-operators
+
+--acronyms ID,URL,UUID,HTTP,API,JSON,XML,HTML,DNS,VPN,UI,TCP,UDP,TUN,SOCKS
+
+--swiftversion 6.2
+
+--funcattributes prev-line
+--typeattributes prev-line
+
+--extensionacl on-extension
+
+--nilinit remove
+
+--ifdef indent
+
+--enable \
+  andOperator,\
+  anyObjectProtocol,\
+  blankLineAfterImports,\
+  blankLinesAroundMark,\
+  blankLinesAtEndOfScope,\
+  blankLinesAtStartOfScope,\
+  blankLinesBetweenScopes,\
+  braces,\
+  conditionalAssignment,\
+  consecutiveBlankLines,\
+  consecutiveSpaces,\
+  consistentSwitchCaseSpacing,\
+  duplicateImports,\
+  elseOnSameLine,\
+  emptyBraces,\
+  enumNamespaces,\
+  extensionAccessControl,\
+  genericExtensions,\
+  hoistAwait,\
+  hoistPatternLet,\
+  hoistTry,\
+  indent,\
+  initCoderUnavailable,\
+  leadingDelimiters,\
+  linebreakAtEndOfFile,\
+  linebreaks,\
+  modifierOrder,\
+  redundantBackticks,\
+  redundantBreak,\
+  redundantExtensionACL,\
+  redundantFileprivate,\
+  redundantGet,\
+  redundantInit,\
+  redundantInternal,\
+  redundantLet,\
+  redundantLetError,\
+  redundantNilInit,\
+  redundantObjc,\
+  redundantOptionalBinding,\
+  redundantParens,\
+  redundantPattern,\
+  redundantRawValues,\
+  redundantReturn,\
+  redundantSelf,\
+  redundantStaticSelf,\
+  redundantType,\
+  redundantTypedThrows,\
+  redundantVoidReturnType,\
+  semicolons,\
+  sortDeclarations,\
+  sortImports,\
+  sortTypealiases,\
+  spaceAroundBraces,\
+  spaceAroundBrackets,\
+  spaceAroundComments,\
+  spaceAroundGenerics,\
+  spaceAroundOperators,\
+  spaceAroundParens,\
+  spaceInsideBraces,\
+  spaceInsideBrackets,\
+  spaceInsideComments,\
+  spaceInsideGenerics,\
+  spaceInsideParens,\
+  strongifiedSelf,\
+  todos,\
+  trailingClosures,\
+  trailingCommas,\
+  trailingSpace,\
+  typeSugar,\
+  void,\
+  wrap,\
+  wrapArguments,\
+  wrapAttributes,\
+  wrapMultilineStatementBraces,\
+  yodaConditions
+
+--disable \
+  acronyms,\
+  assertionFailures,\
+  docComments,\
+  isEmpty,\
+  markTypes,\
+  opaqueGenericParameters,\
+  organizeDeclarations,\
+  preferKeyPath,\
+  redundantClosure,\
+  sortSwitchCases,\
+  unusedArguments,\
+  wrapConditionalBodies,\
+  wrapEnumCases,\
+  wrapLoopBodies

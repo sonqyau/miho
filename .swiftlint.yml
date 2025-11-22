@@ -1,0 +1,307 @@
+# Google Swift Style Guide: https://google.github.io/swift/
+# SwiftLint Documentation: https://realm.github.io/SwiftLint/rule-directory.html
+
+included:
+  - miho
+
+excluded:
+  - .build
+  - .swiftpm
+  - miho.xcodeproj
+  - miho/Resources
+  - miho/Sources/Daemons
+  - "**/*.generated.swift"
+
+# line_length:
+#   warning: 100
+#   error: 120
+#   ignores_function_declarations: false
+#   ignores_comments: false
+#   ignores_urls: true
+
+# file_length:
+#   warning: 500
+#   error: 1000
+#   ignore_comment_only_lines: true
+
+# type_body_length:
+#   warning: 300
+#   error: 500
+
+# function_body_length:
+#   warning: 50
+#   error: 100
+
+function_parameter_count:
+  warning: 5
+  error: 8
+
+cyclomatic_complexity:
+  warning: 10
+  error: 20
+
+nesting:
+  type_level:
+    warning: 2
+    error: 3
+
+identifier_name:
+  min_length:
+    warning: 2
+    error: 1
+  max_length:
+    warning: 50
+    error: 60
+  excluded:
+    - id
+    - x
+    - y
+    - z
+    - i
+    - j
+    - k
+    - db
+    - to
+    - up
+
+type_name:
+  min_length: 3
+  max_length:
+    warning: 40
+    error: 50
+  excluded:
+    - ID
+  validates_start_with_lowercase: false
+
+disabled_rules:
+  - todo
+  - trailing_whitespace
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
+  - multiple_closures_with_trailing_closure
+  - modifier_order
+  - explicit_acl
+  - explicit_top_level_acl
+  - explicit_type_interface
+  - file_types_order
+  - type_contents_order
+  - missing_docs
+  - file_length
+  - type_body_length
+  - function_body_length
+  - line_length
+  - attributes
+opt_in_rules:
+  - closure_spacing
+  - closure_end_indentation
+  - closure_body_length
+  - trailing_closure
+  - anonymous_argument_in_multiline_closure
+  - explicit_init
+  - explicit_type_interface
+  - explicit_acl
+  - explicit_top_level_acl
+  - file_name
+  - file_name_no_space
+  # - file_types_order
+  # - type_contents_order
+  - sorted_imports
+  - empty_count
+  - empty_string
+  - empty_collection_literal
+  - empty_xctest_method
+  - first_where
+  - last_where
+  - contains_over_first_not_nil
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - contains_over_range_nil_comparison
+  - sorted_first_last
+  - reduce_boolean
+  - reduce_into
+  - flatmap_over_map_reduce
+  - array_init
+  - collection_alignment
+  - operator_usage_whitespace
+  - redundant_nil_coalescing
+  - redundant_type_annotation
+  - redundant_self_in_closure
+  - toggle_bool
+  - yoda_condition
+  - implicit_return
+  - shorthand_optional_binding
+  - pattern_matching_keywords
+  - prefer_zero_over_explicit_init
+  - multiline_arguments
+  - multiline_arguments_brackets
+  - multiline_function_chains
+  - multiline_parameters
+  - multiline_parameters_brackets
+  - multiline_literal_brackets
+  # - missing_docs
+  - fatal_error_message
+  - force_unwrapping
+  - unhandled_throwing_task
+  - fallthrough
+  - overridden_super_call
+  - prohibited_super_call
+  - unneeded_parentheses_in_closure_argument
+  - conditional_returns_on_newline
+  # - attributes
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace_between_cases
+  - accessibility_label_for_image
+  - accessibility_trait_for_button
+  - test_case_accessibility
+  - balanced_xctest_lifecycle
+  - prefer_self_in_static_references
+  - prefer_self_type_over_type_of_self
+  - self_binding
+  - shorthand_argument
+  - convenience_type
+  - discouraged_none_name
+  - discouraged_optional_boolean
+  - discouraged_optional_collection
+  - identical_operands
+  - joined_default_parameter
+  - legacy_multiple
+  - lower_acl_than_parent
+  - static_operator
+  - strict_fileprivate
+  - unavailable_function
+  - unowned_variable_capture
+  - untyped_error_in_catch
+  - unused_parameter
+
+trailing_closure:
+  only_single_muted_parameter: true
+
+implicit_return:
+  included:
+    - closure
+    - function
+    - getter
+
+# missing_docs:
+#   warning: open
+#   excludes_extensions: true
+#   excludes_inherited_types: true
+
+force_unwrapping:
+  severity: warning
+
+closure_body_length:
+  warning: 50
+  error: 150
+
+multiline_arguments:
+  first_argument_location: next_line
+  only_enforce_after_first_closure_on_first_line: true
+
+multiline_parameters:
+  allows_single_line: true
+
+collection_alignment:
+  align_colons: false
+
+# type_contents_order:
+#   order:
+#     - case
+#     - associated_type
+#     - type_alias
+#     - subtype
+#     - type_property
+#     - instance_property
+#     - ib_outlet
+#     - initializer
+#     - deinitializer
+#     - type_method
+#     - view_life_cycle_method
+#     - ib_action
+#     - other_method
+#     - subscript
+
+# attributes:
+#   always_on_same_line:
+#     - "@IBAction"
+#     - "@NSManaged"
+#     - "@objc"
+#   always_on_line_above:
+#     - "@available"
+#     - "@discardableResult"
+#     - "@MainActor"
+#     - "@Observable"
+#     - "@State"
+#     - "@StateObject"
+#     - "@ObservedObject"
+#     - "@EnvironmentObject"
+#     - "@Environment"
+#     - "@Binding"
+
+file_name:
+  severity: warning
+  excluded:
+    - main.swift
+    - MihoApp.swift
+
+# file_types_order:
+#   order:
+#     - main_type
+#     - extension
+#     - preview_provider
+
+vertical_parameter_alignment_on_call:
+  severity: warning
+
+sorted_imports:
+  severity: warning
+
+shorthand_optional_binding:
+  severity: warning
+
+unused_parameter:
+  severity: warning
+
+reporter: "xcode"
+
+custom_rules:
+  no_semicolons:
+    name: "No Semicolons"
+    regex: ";\\s*[^/\\s]"
+    match_kinds:
+      - identifier
+      - keyword
+      - typeidentifier
+      - number
+    message: "Semicolons must not be used to separate multiple statements; use one statement per line."
+    severity: error
+
+  array_shorthand:
+    name: "Array Shorthand"
+    regex: "Array<"
+    message: "Use [Element] instead of Array<Element>"
+    severity: warning
+
+  dictionary_shorthand:
+    name: "Dictionary Shorthand"
+    regex: "Dictionary<"
+    message: "Use [Key: Value] instead of Dictionary<Key, Value>"
+    severity: warning
+
+  optional_shorthand:
+    name: "Optional Shorthand"
+    regex: "Optional<"
+    message: "Use Type? instead of Optional<Type>"
+    severity: warning
+
+  void_return:
+    name: "Void Return Type"
+    regex: "\\)\\s*->\\s*\\(\\)"
+    message: "Use -> Void instead of -> ()"
+    severity: warning
+
+  mark_format:
+    name: "MARK Format"
+    regex: "//\\s*MARK:\\s*[^-\\s]"
+    message: "MARK comments should be '// MARK: - Description'"
+    severity: warning
