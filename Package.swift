@@ -67,8 +67,10 @@ let package = Package(
         .enableUpcomingFeature("StrictConcurrency"),
       ],
       linkerSettings: [
-        .linkedLibrary("mihomo", .when(platforms: [.macOS])),
-        .unsafeFlags(["-Lmiho/Resources/Kernel/build"], .when(platforms: [.macOS])),
+        .unsafeFlags([
+          "-Lmiho/Resources/Kernel/build",
+          "-lmihomo"
+        ], .when(platforms: [.macOS])),
       ],
     ),
     .executableTarget(
